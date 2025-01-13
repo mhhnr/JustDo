@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
