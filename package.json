@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm --filter \"@portfolio/*\" build",
+    "build": "pnpm clean && pnpm --filter \"@portfolio/*\" build",
     "dev": "pnpm --filter \"@portfolio/*\" dev",
     "lint": "pnpm --filter \"@portfolio/*\" lint",
     "clean": "pnpm --filter \"@portfolio/*\" clean",

@@ -1,5 +1,16 @@
 {
-  "buildCommand": "pnpm build",
+  "version": 2,
+  "buildCommand": "cd ../.. && pnpm install && pnpm build",
   "outputDirectory": "apps/landing/dist",
-  "framework": "astro"
+  "framework": "astro",
+  "installCommand": "pnpm install",
+  "builds": [
+    {
+      "src": "apps/landing/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ]
 } 
