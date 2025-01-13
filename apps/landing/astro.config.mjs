@@ -5,14 +5,11 @@ import { fileURLToPath } from 'url';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  outDir: './dist',
-  publicDir: './public',
+  outDir: 'dist',
+  publicDir: 'public',
   root: '.',
   build: {
-    assets: 'assets',
-    client: './dist',
-    server: './dist/server',
-    format: 'directory'
+    assets: 'assets'
   },
   base: '/'
 });
