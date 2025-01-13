@@ -12,6 +12,9 @@ dist/
 .astro/
 .turbo/
 
+# keep public directory
+!public/
+
 # IDE - VSCode
 .vscode/*
 !.vscode/extensions.json
