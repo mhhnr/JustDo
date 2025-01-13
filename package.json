@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter \"@portfolio/*\" build",
+    "dev": "pnpm --filter \"@portfolio/*\" dev",
+    "lint": "pnpm --filter \"@portfolio/*\" lint",
+    "clean": "pnpm --filter \"@portfolio/*\" clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,astro}\""
+  },
+  "dependencies": {
+    "astro": "^5.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-astro": "^0.13.0",
+    "turbo": "latest",
+    "typescript": "^5.0.0"
+  },
+  "packageManager": "pnpm@10.2.4",
+  "workspaces": ["apps/*"]
+} 
