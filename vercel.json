@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm build",
-  "installCommand": "pnpm i",
+  "buildCommand": "cd ../.. && pnpm build",
+  "installCommand": "cd ../.. && pnpm install --no-frozen-lockfile",
   "framework": "astro",
   "outputDirectory": "apps/portfolio/dist"
 } 
