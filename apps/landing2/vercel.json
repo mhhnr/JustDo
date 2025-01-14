@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=@portfolio/landing2...",
+  "ignoreCommand": "npx turbo-ignore"
+} 
