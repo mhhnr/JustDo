@@ -1,6 +1,6 @@
 {
   "framework": "astro",
-  "buildCommand": "cd ../.. && pnpm install && pnpm turbo run build --filter=@portfolio/landing...",
+  "buildCommand": "cd ../.. && pnpm install --no-frozen-lockfile && pnpm turbo run build --filter=@portfolio/landing...",
   "outputDirectory": "dist",
   "ignoreCommand": "npx turbo-ignore"
 } 
