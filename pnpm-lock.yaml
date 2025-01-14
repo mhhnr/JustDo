@@ -27,13 +27,12 @@ importers:
 
   apps/landing:
     dependencies:
-      astro:
-        specifier: ^5.1.6
-        version: 5.1.6(@types/node@20.17.6)(rollup@4.30.1)(typescript@5.5.4)
-    devDependencies:
       '@astrojs/vercel':
         specifier: ^7.3.6
         version: 7.8.2(astro@5.1.6(@types/node@20.17.6)(rollup@4.30.1)(typescript@5.5.4))(react@19.0.0)(rollup@4.30.1)
+      astro:
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.17.6)(rollup@4.30.1)(typescript@5.5.4)
 
   apps/landing2:
     dependencies:
