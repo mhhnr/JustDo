@@ -1,6 +1,0 @@
-{
-  "framework": "astro",
-  "buildCommand": "cd ../.. && pnpm install --no-frozen-lockfile && cd apps/landing && pnpm install && pnpm run build",
-  "outputDirectory": "dist",
-  "ignoreCommand": "npx turbo-ignore"
-} 
