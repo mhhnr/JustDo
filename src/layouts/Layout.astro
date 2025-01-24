@@ -12,8 +12,24 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>My Portfolio</title>
+		<script is:inline>
+			// Initialize theme
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+			
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
 	</head>
-	<body class="min-h-screen flex flex-col bg-white text-gray-800 font-mono">
+	<body class="min-h-screen flex flex-col bg-background-primary dark:bg-background-dark text-text-primary dark:text-white font-mono">
 		<Header />
 		<main class="flex-1 pt-16">
 			<slot />
