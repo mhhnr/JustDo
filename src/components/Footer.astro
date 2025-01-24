@@ -1,0 +1,74 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-50 py-8 mt-auto border-t border-gray-200">
+  <div class="container mx-auto px-4 text-center">
+    <div class="flex justify-center gap-8 mb-6 flex-wrap">
+      <a 
+        href="https://github.com" 
+        target="_blank" 
+        rel="noopener"
+        class="text-gray-800 hover:text-gray-600 transition-colors p-2"
+      >
+        GitHub
+      </a>
+      <a 
+        href="https://linkedin.com" 
+        target="_blank" 
+        rel="noopener"
+        class="text-gray-800 hover:text-gray-600 transition-colors p-2"
+      >
+        LinkedIn
+      </a>
+      <a 
+        href="https://twitter.com" 
+        target="_blank" 
+        rel="noopener"
+        class="text-gray-800 hover:text-gray-600 transition-colors p-2"
+      >
+        Twitter
+      </a>
+    </div>
+    <div class="text-sm text-gray-600">
+      © {currentYear} Your Name. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--color-background-alt);
+    padding-block: var(--spacing-xl);
+    margin-top: auto;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .social-links a {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-xs);
+  }
+
+  .copyright {
+    color: var(--color-text-light);
+  }
+
+  @media (min-width: 768px) {
+    .social-links {
+      gap: var(--spacing-xl);
+    }
+  }
+</style> 

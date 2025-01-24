@@ -1,0 +1,82 @@
+<main id="main" class="container mx-auto px-4 py-12">
+  <h1 class="text-display text-center mb-12">
+    My Portfolio
+  </h1>
+  <nav class="max-w-2xl mx-auto" aria-label="Main navigation">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <li>
+        <a 
+          href="/about" 
+          class="block p-4 border border-gray-200 rounded-lg 
+                 hover:border-gray-300 hover:bg-background-secondary 
+                 transition-colors text-text-primary"
+        >
+          About Me
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/projects" 
+          class="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/skills" 
+          class="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
+        >
+          Technical Skills
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/experience" 
+          class="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
+        >
+          Work Experience
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/contact" 
+          class="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+</main>
+
+<style>
+  main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #666;
+    text-decoration: underline;
+  }
+</style> 
