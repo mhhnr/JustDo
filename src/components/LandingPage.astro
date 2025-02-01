@@ -5,6 +5,10 @@ import dragon from '../assets/dragon.png';
 ---
 
 <main id="main" class="container mx-auto px-2 py-4">
+  <div class="quote-container text-center mt-8">
+    <p class="typing-text text-text-primary dark:text-white" data-text="Do it for yourself. | Fear cuts deeper than swords. | Never forget what you are wear it like an armor. | Freedom to make my own mistakes was all I ever wanted. | Power resides where I believe it resides."></p>
+  </div>
+
   <div class="flex flex-row items-center justify-between gap-8 max-w-5xl mx-auto">
     <div class="w-1/6">
       <Image 
@@ -24,6 +28,8 @@ import dragon from '../assets/dragon.png';
       />
     </div>
   </div>
+
+
 </main>
 
 <style>
@@ -32,4 +38,60 @@ import dragon from '../assets/dragon.png';
       padding: 0.5rem;
     }
   }
-</style> 
+
+  .quote-container {
+    min-height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .typing-text {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-robot);
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+    border-right: 0.125em solid currentColor;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor; }
+  }
+</style>
+
+<script>
+  const textElement = document.querySelector('.typing-text');
+  const texts = textElement.getAttribute('data-text').split('|').map(text => text.trim());
+  let currentIndex = 0;
+
+  async function typeText() {
+    while (true) {
+      const currentText = texts[currentIndex];
+      
+      // Type the text
+      for (let i = 0; i <= currentText.length; i++) {
+        textElement.innerText = currentText.slice(0, i);
+        await new Promise(resolve => setTimeout(resolve, 20));
+      }
+      
+      // Wait at the end of typing
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Erase the text
+      for (let i = currentText.length; i >= 0; i--) {
+        textElement.innerText = currentText.slice(0, i);
+        await new Promise(resolve => setTimeout(resolve, 10));
+      }
+      
+      // Move to next text
+      currentIndex = (currentIndex + 1) % texts.length;
+      await new Promise(resolve => setTimeout(resolve, 500));
+    }
+  }
+
+  typeText();
+</script> 
