@@ -316,4 +316,17 @@ small, .text-small {
 .text-large {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
+}
+
+/* Footer specific styles */
+.footer-heading {
+  @apply text-base font-semibold mb-3 text-text-primary dark:text-white;
+}
+
+.footer-link {
+  @apply text-sm text-text-light dark:text-gray-400 hover:text-text-secondary dark:hover:text-gray-300 transition-colors;
+}
+
+.footer-section {
+  @apply space-y-1.5; /* Reduced spacing between links */
 } 
